@@ -78,7 +78,7 @@ export default class PaymentMethod extends React.Component {
             </TouchableOpacity >
         </ScrollView>
             <View >
-                <TouchableOpacity onPress = {()=> this.props.navigation.navigate('Add-Card')}>
+                <TouchableOpacity onPress = {()=> this.props.navigation.navigate('EditPayments')}>
                 <View style={styles.btnClickContain_right}>
                     <Text style={styles.btnText}>Pay Now </Text>
                     <Text  style={styles.btnText}>$20.00</Text>

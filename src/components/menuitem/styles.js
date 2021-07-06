@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   title: {
     //flex: 1,
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: 'bold',
     textAlign: 'left',
     color: '#444444',

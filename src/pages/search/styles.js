@@ -1,3 +1,4 @@
+
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -53,7 +54,11 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginTop: 2,
     
+  },
+  serachInput:{
+      backgroundColor:"#fff"
   }
+
   
   
 });

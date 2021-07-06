@@ -29,7 +29,7 @@ export default class SplashScreen extends React.Component {
 
    setTimeout(
     function() {
-      this.props.navigation.navigate('Home');
+      this.props.navigation.navigate('login');
       that.Hide_Splash_Screen();  
     }
     .bind(this),

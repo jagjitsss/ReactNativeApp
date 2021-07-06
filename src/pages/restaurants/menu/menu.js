@@ -27,7 +27,7 @@ export default class Menu extends React.Component {
                   <BackButton  onPress={() => {this.props.navigation.goBack();}}/>
                   <View style={styles.row_}>
                     <Image source={require('../../../../assets/icons/search.png')} style={styles.img_} />
-                    <TouchableOpacity>
+                    <TouchableOpacity  onPress = {()=> this.props.navigation.navigate('Favourites')}>
                         <Image source={require('../../../../assets/icons/like.png')} style={[styles.img_, {  marginTop:15}]} />
                     </TouchableOpacity>   
                   </View>  

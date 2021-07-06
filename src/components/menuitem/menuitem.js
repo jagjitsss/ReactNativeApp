@@ -17,7 +17,7 @@ export default class MenuItem extends React.Component {
     <TouchableOpacity  underlayColor='rgba(73,182,77,0.9)'   onPress={() => this.onPressOrder(item)}>
       <View style={styles.container} key={index}>
         <Image style={styles.photo} source={{ uri: item.photo_url }} />
-        <Text style={styles.title}>{item.title}</Text>
+        <Text style={styles.title}  numberOfLines={1}>{item.title}</Text>
         <Text style={styles.category}> $20.00</Text>
         {index ==0 ?
                   <Text  style={[styles.category, {position:"absolute", right:0, bottom:12, color:"#00", textAlign:"center", paddingLeft:5,paddingRight:5, borderRadius:8,  backgroundColor: '#FFCC4E', alignSelf: 'flex-start'}]}>3</Text>

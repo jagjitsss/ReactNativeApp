@@ -365,7 +365,7 @@ export const Cart = [
     categoryId: 3,
     rating:"4.7",
     price:"20.00",
-    title: 'Oatmeal Cookies',
+    title: 'Oatmeal Cookiesa',
     photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
     photosArray: [
       'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',

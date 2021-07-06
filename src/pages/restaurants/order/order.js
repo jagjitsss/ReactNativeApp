@@ -20,13 +20,13 @@ export default class OrderDetail extends React.Component {
             <View style={styles.container}>
                 <Image source={{ uri: item.photo_url}} style={styles.photo} />
                 <Text style={styles.text}>1 X</Text>
-                <Text style={[styles.text, {width:160}]}>{item.title}</Text>
+                <Text style={[styles.text, {width:150}]}>{item.title}</Text>
                 <Text style={[styles.text]}>${item.price}</Text>
             </View>
             :  <View style={styles.container}>
                   <Image source={require('../../../../assets/icons/Icon_del.png')} style={styles.photo} />
                   <Text style={[styles.text, {width:195}]}>Delivery</Text>
-                  <Text style={[styles.text]}>$20.00 </Text>
+                  <Text style={[styles.text,{marginLeft:0}]}>$20.00 </Text>
               </View>
               }
         </TouchableOpacity>

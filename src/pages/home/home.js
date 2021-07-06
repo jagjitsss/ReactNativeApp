@@ -3,6 +3,8 @@ import { FlatList, LogBox  ,TouchableOpacity ,  ScrollView, SafeAreaView, Text, 
 import styles from './styles';
 import { Restaurant, categories, promo } from '../../data/dataArrays';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import BottomBar from '../../components/bottomBar/bottomBar';
+
 const star = <Icon name="star" size={20} color="#6B6B6B"  />;
 LogBox.ignoreAllLogs();
 
@@ -99,7 +101,10 @@ export default class HomeScreen extends React.Component {
                 keyExtractor={item => `${item.recipeId}`}
             />
         </ScrollView>
+        
       </SafeAreaView>
+
+      
     );
   }
 }

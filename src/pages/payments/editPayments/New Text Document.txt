@@ -1,5 +1,14 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
+// screen sizing
+const { width, height } = Dimensions.get('window');
+// orientation must fixed
+const SCREEN_WIDTH = width < height ? width : height;
+
+const recipeNumColums = 4;
+// item size
+const RECIPE_ITEM_HEIGHT = 160;
+const RECIPE_ITEM_MARGIN = 20;
 const styles = StyleSheet.create({
   
   title: {
@@ -10,7 +19,15 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "bold",
     textAlign: "left",
+    position:'absolute',
+    top:0,
+    right: '40%'
     
+  },
+
+  photo: {
+    height: 50,
+    width: 55,
   },
 
   container: {
@@ -18,32 +35,33 @@ const styles = StyleSheet.create({
     padding: 12,
     flexDirection: 'row',
     alignItems: 'center',
-    //justifyContent: 'space-between',
-    //borderWidth:.2,
-    //borderBottomColor:"#C5C6C8"
+    justifyContent: 'space-between',
+    borderColor: '#cccccc',
+    
+    borderWidth: 0.5,
+    borderRadius: 15,
+    marginTop:10,
+    marginLeft:15,
+    marginRight:15
+
   },
   text: {
-    marginLeft: 10,
+    marginLeft: 12,
     fontSize: 16,
   },
-  photo: {
-    height: 50,
-    width: 50,
-    borderRadius: 50,
-  },
+
 
   btnClickContain_right: {
     flexDirection: "row",
     justifyContent: 'space-between',
-    width:"92%",
+    width:"90%",
     marginRight :10,
     backgroundColor: '#FFCC4E',
     alignSelf: 'stretch',
     marginLeft:15,
-    marginRight:15,
     height:60,
     borderRadius:15,
-    padding:13  
+    padding:19
     
   },
  
@@ -55,6 +73,9 @@ const styles = StyleSheet.create({
     
   }
   
+
+ 
+ 
   
 });
 
