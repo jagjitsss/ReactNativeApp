@@ -26,14 +26,15 @@ const styles = StyleSheet.create({
 
   },
   button_ :{
-    borderRadius: 15,
+    borderRadius: .20,
     backgroundColor: "#F2F3F5",
     marginLeft:10,
     marginBottom: 6,
     textAlign: "center",
     padding:10,
     fontWeight: "normal",
-    fontSize:19
+    fontSize:19,
+        overflow: 'hidden',
   },
   row_: {
     position: 'absolute', 

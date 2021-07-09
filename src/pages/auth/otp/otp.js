@@ -44,12 +44,15 @@ export default class OTP extends React.Component {
                     keyboardType="number-pad"
                     textContentType="oneTimeCode"
                     renderCell={({index, symbol, isFocused}) => (
+
+                    <View key={index}
+                        style={[styles.cell, isFocused && styles.focusCell]}>    
                     <Text
-                        key={index}
-                        style={[styles.cell, isFocused && styles.focusCell]}
+                        
                         >
                         {symbol || (isFocused ? <Cursor /> : null)}
                     </Text>
+                    </View>
                     )}
                  />
                   <Text  style={styles.title_}>Didn't receive the OTP? <Text style={{color:"#2F80ED"}}>Resend</Text></Text>

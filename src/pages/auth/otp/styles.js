@@ -71,9 +71,10 @@ const styles = StyleSheet.create({
         height: 40,
         lineHeight: 38,
         fontSize: 24,
-        borderBottomWidth: 1,
+        borderBottomWidth: 2,
         borderColor: '#FFCC4E',
         textAlign: 'center',
+        overflow: 'hidden'
     },
     focusCell: {
         borderColor: '#000',

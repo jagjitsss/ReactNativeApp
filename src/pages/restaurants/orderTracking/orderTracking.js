@@ -22,9 +22,9 @@ export default class OrderTracking extends React.Component {
             </ImageBackground>
 
             <Text style={styles.textTitle}>Order Tracking   </Text>
-            <Text style={styles.extrasmalltext}><Image source={require('../../../../assets/icons/time.png')} style={styles.icon_} />&nbsp;&nbsp;Delivery Time</Text>
+            <Text style={styles.extrasmalltext}><Image source={require('../../../../assets/icons/time.png')} style={styles.icon_} />&nbsp;Delivery Time</Text>
             <Text style={styles.smalltext}>15 min - 20 min</Text>
-            <Text style={styles.extrasmalltext}><Image source={require('../../../../assets/icons/addressPin.png')} style={styles.icon_} /> &nbsp;&nbsp;Delivery Address</Text>
+            <Text style={styles.extrasmalltext}><Image source={require('../../../../assets/icons/addressPin.png')} style={styles.icon_} /> Delivery Address</Text>
             <Text style={styles.smalltext}>&nbsp;70 Atlantic St, Stamford</Text>
             <View style={styles.container}>
               <Image source={require('../../../../assets/icons/Avatars.png')} style={styles.photo} /> 

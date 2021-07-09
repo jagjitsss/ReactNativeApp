@@ -8,7 +8,8 @@ export default class Categories extends React.Component {
     <TouchableOpacity  underlayColor='rgba(73,182,77,0.9)' >
       <View style={styles.CategoryContainer} key={item}>
         {index ==0 ? 
-          <Text  style={[styles.title, { backgroundColor: '#FFCC4E',   borderRadius: 15 }]}>  Most Popular</Text>
+          <Text  style={[styles.title, { backgroundColor: '#FFCC4E',   borderRadius: 20,
+        overflow: 'hidden' }]}>  Most Popular</Text>
         : <Text style={styles.title}>{item.title}</Text>
         } 
       </View>

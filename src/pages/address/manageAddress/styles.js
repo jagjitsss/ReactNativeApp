@@ -44,10 +44,10 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   icon_:{
-    marginRight:30,
-    height:20,
-    width:20,
-  },
+    marginRight:0,
+    marginTop:0,
+        overflow: 'hidden',
+     },
   btnClickContain_right: {
     width:"90%",
     marginRight :10,

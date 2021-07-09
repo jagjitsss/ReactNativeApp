@@ -78,9 +78,8 @@ const styles = StyleSheet.create({
     textAlign: "left",
   },
   icon_:{
-    marginRight:30,
-    height:15,
-    width:15,
+    marginRight:0,
+    
   },
   photo: {
     height:50,
