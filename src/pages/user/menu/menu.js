@@ -13,7 +13,7 @@ export default class UserMenu extends React.Component {
         menu: [
           {
             "name": "My Orders",
-            "route": "MyOrder",
+            "route": "UserOrders",
             "image": require('../../../../assets/icons/OrderProfile.png')
           },
           {
@@ -31,6 +31,8 @@ export default class UserMenu extends React.Component {
             "route": "Offers",
             "image": require('../../../../assets/icons/offer.png')
           },
+
+          
           {
             "name": "Payments",
             "route": "Payments-method",
@@ -40,14 +42,53 @@ export default class UserMenu extends React.Component {
             "name": "Location",
             "route": "Select-Location",
             "image": require('../../../../assets/icons/location.png')
+          },
+          {
+            "name": "Search Page 1",
+            "route": "SearchPage1",
+            "image": require('../../../../assets/icons/location.png')
+          },
+          {
+            "name": "Smile House Cafe - 1",
+            "route": "RestaurantMenu1",
+            "image": require('../../../../assets/icons/location.png')
           }
+          ,
+          {
+            "name": "Smile House Cafe - 2",
+            "route": "RestaurantMenu2",
+            "image": require('../../../../assets/icons/location.png')
+          }
+
+          ,
+          {
+            "name": "Smile House Cafe - 3",
+            "route": "RestaurantMenu3",
+            "image": require('../../../../assets/icons/location.png')
+          }
+          ,
+          {
+            "name": "Menu 2",
+            "route": "UserMenuV2",
+            "image": require('../../../../assets/icons/location.png')
+          },
+          {
+            "name": "Offers & Promos v1",
+            "route": "OffersPromo",
+            "image": require('../../../../assets/icons/offer.png')
+          },
+
+          {
+            "name": "Recent Searches",
+            "route": "recentSearchPage",
+            "image": require('../../../../assets/icons/offer.png')
+          },
         ],
       }
     
     
     
   }
-
 
 
 
@@ -76,7 +117,7 @@ export default class UserMenu extends React.Component {
         <ScrollView  style={{marginBottom:50}} >
         <View style={{flexDirection: "row", justifyContent:"flex-start",marginTop:20, marginLeft:20,marginBottom:20}}>
           <Image source={require('../../../../assets/icons/Avatars1.png')} style={styles.icon_} />
-          <Text style={styles.smalltext}>ArtTemplate</Text>
+          <Text style={styles.smalltext}>ArtTemplate11</Text>
          </View> 
           <FlatList
                 vertical
