@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     position:'absolute',
-    top:0,
+    top:40,
     right: 0,
     left:0
     
@@ -81,9 +81,10 @@ btnDelv:{
     backgroundColor:"#88F79A",
     height:30,
     width:80,
-    padding:4,
+    padding:6,
     borderRadius:5,
-    textAlign:"center"
+    textAlign:"center",
+    overflow:"hidden"
     
 },
 
@@ -91,9 +92,10 @@ btnCanl:{
     backgroundColor:"#FC8B74",
     height:30,
     width:80,
-    padding:4,
+    padding:6,
     borderRadius:5,
-    textAlign:"center"
+    textAlign:"center",
+    overflow:"hidden"
     
 }
 

@@ -30,7 +30,7 @@ export default class HomeScreen extends React.Component {
         {item.isActive ? 
             <Icon style={{ marginBottom: 10, padding:13, height:80,  marginLeft: 10,  marginRight: 10, textAlign: "center", backgroundColor : "#FFCC4E", borderRadius: 15, overflow: 'hidden' }} name={item.imageUrl} size={45} color="#000" />
          :
-            <Icon style={{ marginBottom: 10, padding:11, height:80,  marginLeft: 10,  marginRight: 10, textAlign: "center", borderRadius: 15, overflow: 'hidden' }} name={item.imageUrl} size={45} color="#000" /> 
+            <Icon style={{ marginBottom: 10, padding:11, height:80,  marginLeft: 10,  marginRight: 10, textAlign: "center", borderRadius: 15,  overflow: 'hidden' }} name={item.imageUrl} size={45} color="#000" /> 
         } 
         <Text style={{ marginBottom: 10, textAlign: "center" }}>{item.title}</Text>
       </View>

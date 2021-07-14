@@ -7,7 +7,9 @@ const styles = StyleSheet.create({
     marginLeft:2,
     marginTop:15,
     color:"#fff"
-  }
+  },
+
+ 
 });
 
 export default styles;

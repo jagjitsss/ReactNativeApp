@@ -109,7 +109,7 @@ export default class ProductDetail extends React.Component {
               </View>
         
         </ScrollView>
-        <View style={{flexDirection: "row", position:"absolute", bottom:5}}>
+        <View style={{flexDirection: "row", position:"absolute", bottom:20}}>
             <View style = {{flex: 1, justifyContent: 'flex-start',}}>
                 <View  style={styles.btnClickContain_left}>
                     <TouchableOpacity  onPress={()=>{this.qtyValue('remove')}}>

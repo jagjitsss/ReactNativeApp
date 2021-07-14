@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
     textTransform:"uppercase",
     borderRadius:15,
     fontSize:17,
-    marginTop:5
+    marginTop:5,
+     overflow:"hidden"
   },
   container: {
     flexDirection: 'row',

@@ -84,6 +84,24 @@ const styles = StyleSheet.create({
   photo: {
     height:50,
     width:50,
+  },
+     container2: {
+    height: 400,
+    width: "100%",
+    top:0,
+  },
+  map: {
+   height:350,
+   width:"100%",
+  
+  },
+
+   btnContainer:{
+    position: 'absolute',//use absolute position to show button on top of the map
+    top: '8%', //for center align
+    alignSelf: 'flex-start',
+    zIndex:999
+    
   }
 
   

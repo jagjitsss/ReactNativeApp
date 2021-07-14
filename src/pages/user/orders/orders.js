@@ -46,11 +46,11 @@ export default class UserOrders extends React.Component {
 
         {index ==0 ?
         <TouchableOpacity  underlayColor='rgba(73,182,77,0.9)' onPress={(e)=>this.ShowDiv()} >
-            <Image source={require("../../../../assets/icons/Collapse.png")}   style={{position:"absolute",bottom:4}}/>
+            <Image source={require("../../../../assets/icons/Collapse.png")}   style={{position:"absolute",marginBottom:0, bottom:0,width:"100%"}}/>
           </TouchableOpacity>  
 
           :<TouchableOpacity  underlayColor='rgba(73,182,77,0.9)' onPress={(e)=>this.ShowDiv()} >
-          <Image source={require("../../../../assets/icons/CollapseClosed.png")}   style={{position:"absolute",bottom:4}}/>
+          <Image source={require("../../../../assets/icons/CollapseClosed.png")}   style={{position:"absolute",bottom:4, width:"100%"}}/>
         </TouchableOpacity>  }
         </View>
 
@@ -114,4 +114,5 @@ export default class UserOrders extends React.Component {
     );
   }
 }
+
 

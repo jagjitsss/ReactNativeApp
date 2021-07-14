@@ -1,15 +1,45 @@
 import React from 'react';
-import { ImageBackground,  TouchableOpacity, ScrollView, SafeAreaView, Text, View } from 'react-native';
+import { ImageBackground,  TouchableOpacity, ScrollView, SafeAreaView, Text, View, Image } from 'react-native';
 import styles from './styles';
 import BackButton from '../../../components/BackButton/BackButton';
+import Geolocation from "react-native-geolocation-service";
+import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 
 export default class SelectLocation extends React.Component {
 
   constructor(props) {
     super(props);
     this.state={
-        saveAs:"1"
+        saveAs:"1",
+        latitude: 0,
+       longitude: 0,
+       coordinates: [],
     }
+  }
+
+  componentDidMount() {
+
+    /*Geolocation.getCurrentPosition(
+      position => {
+        this.setState({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+          coordinates: this.state.coordinates.concat({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude
+          })
+        });
+      },
+      error => {
+        Alert.alert(error.message.toString());
+      },
+      {
+        showLocationDialog: true,
+        enableHighAccuracy: true,
+        timeout: 20000,
+        maximumAge: 0
+      }
+    );*/
   }
 
   
@@ -20,10 +50,36 @@ export default class SelectLocation extends React.Component {
     return (
 
       <SafeAreaView>
+       <TouchableOpacity onPress={() => {this.props.navigation.goBack();}} style={styles.btnContainer}>
+          <Image source={require('../../../../assets/icons/ArrowblackLeft.png')} style={styles.btnIcon} />
+      </TouchableOpacity>
         <ScrollView>
-          <ImageBackground source={{uri:'https://www.ydesignservices.com/wp-content/uploads/2016/07/Googlemap-600x551.jpg' }} style={{height:350}}>
-            <BackButton backIcon={true  } onPress={() => {this.props.navigation.goBack();}}/>
-          </ImageBackground>
+       
+          
+        <View style={styles.container2}>
+        <MapView
+          provider={PROVIDER_GOOGLE}
+          style={styles.map}
+          region={{
+            latitude: this.state.latitude,
+            longitude: this.state.longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}>
+          <Marker
+              coordinate={{
+                latitude: this.state.latitude,
+                longitude: this.state.longitude,
+              }}>
+          </Marker>
+      </MapView>
+        </View>
+        
+          {/* <ImageBackground source={{uri:'https://www.ydesignservices.com/wp-content/uploads/2016/07/Googlemap-600x551.jpg' }} style={{height:350}}>
+         
+          </ImageBackground> */}
+          <View>
+          
           <Text style={styles.textTitle}>Select Location</Text>
           <Text style={styles.extrasmalltext}>Your Location</Text>
           <Text style={styles.smalltext}>49 Ellsworth Ave, New Haven, CT 06511</Text>
@@ -49,9 +105,12 @@ export default class SelectLocation extends React.Component {
               </View>
             </TouchableOpacity>
             </View>
+          </View>  
         </ScrollView>
       </SafeAreaView>
     );
   }
 }
+
+
 

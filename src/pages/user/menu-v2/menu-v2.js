@@ -56,22 +56,7 @@ export default class UserMenuV2 extends React.Component {
 
 
 
-  rendermenu= ({ item, index }) => (
-    
-    <TouchableOpacity onPress = {()=> this.props.navigation.navigate(item.route)}>
-        <ListItem >
-            <View style={styles.colum}>
-                <View style={item.isActive ? styles.imagePicIsActive : styles.imagePicInActive}>
-                    <Image source={item.image} style={styles.photo} />
-                </View>  
-                <Text style={[styles.text]}  numberOfLines={1}>{item.name}</Text>
-            </View>
-         
-        </ListItem>
-    </TouchableOpacity>
 
-
-  );
 
 
  
@@ -88,13 +73,36 @@ export default class UserMenuV2 extends React.Component {
           </View>
         
          </View> 
-          <FlatList
-                showsVerticalScrollIndicator={false}
+
+         <FlatList
+            data={this.state.menu}
+            renderItem={({item}) => (
+             
+                  <View
+                    style={{
+                      flex: 1,
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      margin: 1,
+                      padding:15
+                    }}>
+                       <TouchableOpacity onPress = {()=> this.props.navigation.navigate(item.route)}>
+                            <View style={item.isActive ? styles.imagePicIsActive : styles.imagePicInActive}>
+                                <Image source={item.image} style={styles.photo} />
+                            </View>  
+                        </TouchableOpacity>
+                        <Text style={[styles.text]}  numberOfLines={1}>{item.name}</Text>
+                      
+                  
+                  </View>
+                
+                )}
                 numColumns={3}
-                data={this.state.menu}
-                renderItem={this.rendermenu}
                 keyExtractor={item => `${item.name}`}
-            />
+          />
+
+
         </ScrollView>
         <View >
             <TouchableOpacity onPress = {()=> this.props.navigation.navigate('Order-Detail')}>
@@ -107,4 +115,6 @@ export default class UserMenuV2 extends React.Component {
     );
   }
 }
+
+
 

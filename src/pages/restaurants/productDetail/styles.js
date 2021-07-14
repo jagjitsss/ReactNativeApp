@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
     marginLeft:15,
     height:60,
     borderRadius:15,
-    padding:20
+    padding:20,
+    marginBottom:10
     
   },
   btnClickContain_right: {

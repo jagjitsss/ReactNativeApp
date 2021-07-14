@@ -13,6 +13,9 @@ target 'appv1' do
   )
 
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+  pod 'react-native-google-maps', :path => '../node_modules/react-native-maps'
+
+
 
   target 'appv1Tests' do
     inherit! :complete

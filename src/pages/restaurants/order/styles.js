@@ -13,15 +13,39 @@ const styles = StyleSheet.create({
     
   },
 
+    container3: {
+        flex: 1,
+        padding: 12,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderStyle:"dashed",
+    
+   
+   },
+
+   container1: {
+    flex: 1,
+    padding: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    //justifyContent: 'space-between',
+  
+   
+  },
+
   container: {
     flex: 1,
     padding: 12,
     flexDirection: 'row',
     alignItems: 'center',
     //justifyContent: 'space-between',
-    //borderWidth:.2,
-    //borderBottomColor:"#C5C6C8"
+    borderBottomWidth:1,
+    borderBottomColor:"#F2F3F5",
+
+
   },
+
+
   text: {
     marginLeft: 10,
     fontSize: 16,

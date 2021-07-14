@@ -11,15 +11,12 @@ const styles = StyleSheet.create({
     justifyContent:"space-evenly", 
   },
 
-  colum:{
-       justifyContent: 'center',
-       alignItems: 'center',
-       width:80
-  },
   text: {
-    marginLeft: 0,
-    fontSize: 12,
-    marginTop:10
+      marginLeft: 0,
+      fontSize: 12,
+      marginTop:10,
+      justifyContent: 'center',
+      alignItems: 'center'
   },
   photo_pic: {
     height: 100,

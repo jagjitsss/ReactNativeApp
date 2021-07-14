@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     position:'absolute',
-    top:0,
+    top:40,
     right: 0,
     left:0
     
