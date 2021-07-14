@@ -23,8 +23,18 @@ import ForgotPassword from './src/pages/auth/forgot/forgot';
 import ResetPassword from './src/pages/auth/resetPassword/resetPassword';
 import Favourites from './src/pages/favourites/favourites';
 import SearchPage from './src/pages/search/search';
+import SearchPage1 from './src/pages/search/search-v1';
+
 import UserMenu from './src/pages/user/menu/menu';
 import EditProfile from './src/pages/user/editProfile/editProfile';
+import RestaurantMenu1 from './src/pages/restaurants/menu/v/menu-v1/menu-v1';
+import RestaurantMenu2 from './src/pages/restaurants/menu/v/menu-v2/menu-v2';
+import RestaurantMenu3 from './src/pages/restaurants/menu/v/menu-v3/menu-v3';
+import UserMenuV2 from './src/pages/user/menu-v2/menu-v2';
+import UserOrders from './src/pages/user/orders/orders';
+import OffersPromo from './src/pages/offers/offer-v1/offer-v1';
+import recentSearchPage from './src/pages/search/recent_search';
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
@@ -161,8 +171,64 @@ function HomeStack() {
      name="EditProfile"
      options={{ headerShown: false, cardStyle: { backgroundColor: '#FFFFFF' },  tabBarVisible: false,}}
      component={EditProfile}
+   /> 
+
+   <Stack.Screen
+     name="SearchPage1"
+     options={{ headerShown: false, cardStyle: { backgroundColor: '#FFFFFF' },  tabBarVisible: false,}}
+     component={SearchPage1}
    />  
+
+   <Stack.Screen
+     name="RestaurantMenu1"
+     options={{ headerShown: false, cardStyle: { backgroundColor: '#FFFFFF' },  tabBarVisible: false,}}
+     component={RestaurantMenu1}
+   />  
+
+   <Stack.Screen
+     name="RestaurantMenu2"
+     options={{ headerShown: false, cardStyle: { backgroundColor: '#FFFFFF' },  tabBarVisible: false,}}
+     component={RestaurantMenu2}
+   /> 
+   <Stack.Screen
+     name="RestaurantMenu3"
+     options={{ headerShown: false, cardStyle: { backgroundColor: '#FFFFFF' },  tabBarVisible: false,}}
+     component={RestaurantMenu3}
+   />  
+   <Stack.Screen
+     name="UserMenuV2"
+     options={{ headerShown: false, cardStyle: { backgroundColor: '#FFFFFF' },  tabBarVisible: false,}}
+     component={UserMenuV2}
+   />  
+
+  <Stack.Screen
+     name="UserOrders"
+     options={{ headerShown: false, cardStyle: { backgroundColor: '#FFFFFF' },  tabBarVisible: false,}}
+     component={UserOrders}
+   />  
+
+  <Stack.Screen
+      name="OffersPromo"
+      options={{ headerShown: false, cardStyle: { backgroundColor: '#FFFFFF' },  tabBarVisible: false,}}
+      component={OffersPromo}
+    />  
+
+
+  <Stack.Screen
+      name="recentSearchPage"
+      options={{ headerShown: false, cardStyle: { backgroundColor: '#FFFFFF' },  tabBarVisible: false,}}
+      component={recentSearchPage}
+    />  
+
+
+
+
+
+
+
     </Stack.Navigator>
+
+    
   );
 }
 
@@ -243,8 +309,8 @@ function App() {
       <Tab.Screen name="Order-Detail" component={OrderDetail}
       
       options={{ 
-        headerShown: false, 
-        cardStyle: { backgroundColor: '#FFFFFF' },
+        headerMode: 'screen',
+    cardStyle: { backgroundColor: '#FFFFFF' },
         Label: false,
         tabBarIcon: ({ color }) => (
           <MaterialCommunityIcons name="shopping-outline" color={color} size={26} />
@@ -253,17 +319,18 @@ function App() {
         
         />
 
+
         <Tab.Screen name="SearchPage" component={SearchPage}
               
-        options={{ 
-          headerShown: false, 
-          cardStyle: { backgroundColor: '#FFFFFF' },
-          Label: false,
-          tabBarIcon: ({ color }) => (
-            <FontAwesome name="search" color={color} size={26} />
-          ),
-          }}
-        
+          options={{ 
+            headerShown: false, 
+            cardStyle: { backgroundColor: '#FFFFFF' },
+            Label: false,
+            tabBarIcon: ({ color }) => (
+              <FontAwesome name="search" color={color} size={26} />
+            ),
+            }}
+          
         />
       <Tab.Screen  name="UserMenu" component={UserMenu}  
        options={{ 
